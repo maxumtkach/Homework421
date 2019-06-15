@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Homework 4-2-1</string>
+    <string name="save_note">Сохранить</string>
+
+    <string name="input_money">Ввод денег</string>
+    <string name="input_info">Информация об оплате</string>
+    <string name="btn_ok">OK</string>
+    <string name="bankCard_chk_bx">С банковской карты</string>
+    <string name="mobile_phone_chk_bx">С мобильного телефона</string>
+    <string name="cash_address_chk_bx">Наличными по адресу</string>
+
+    <string name="ok">OK</string>
+    <string name="choose_end_date">Дата-время окончания задачи:</string>
+    <string name="choose_start_date">Дата-время старта задачи:</string>
+    <string name="settings_set">Настройки</string>
+
+    <string name="btn_show_address">Показать адрес</string>
+    <string name="spinner">Spinner</string>
+    <string name="calendar">Calendar</string>
+    <string name="checkbox">CheckBox</string>
+    <string name="notes">Записная книжка</string>
+    <string name="settings">Settings</string>
+
+    <string-array name="countries">
+        <item>Россия</item>
+        <item>Украина</item>
+        <item>Белоруссия</item>
+    </string-array>
+    <string-array name="r_cities">
+        <item>Москва</item>
+        <item>Санкт-Петербург</item>
+        <item>Казань</item>
+    </string-array>
+    <string-array name="u_cities">
+        <item>Киев</item>
+        <item>Одесса</item>
+        <item>Харьков</item>
+    </string-array>
+    <string-array name="b_cities">
+        <item>Минск</item>
+        <item>Гомель</item>
+        <item>Торжок</item>
+    </string-array>
+</resources>
