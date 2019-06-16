@@ -24,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        SamplesList sampleOne = new SamplesList("Sample1", "It's Settings", R.drawable.settings);
-        SamplesList sampleTwo = new SamplesList("Sample2", "It's Notebook", R.drawable.notebook);
-        SamplesList sampleThree = new SamplesList("Sample3", "It's CheckBox", R.drawable.check_box);
-        SamplesList sampleFour = new SamplesList("Sample4", "It's Calendar", R.drawable.settings);
-        SamplesList sampleFive = new SamplesList("Sample5", "It's Spinner", R.drawable.settings);
+        SamplesList sampleOne = new SamplesList("BMW", "It's car brand", R.drawable.x5);
+        SamplesList sampleTwo = new SamplesList("Chernobyl", "It's world catastrophe", R.drawable.chernobyl);
+        SamplesList sampleThree = new SamplesList("United States \nof America", "It's world power", R.drawable.usa);
+        SamplesList sampleFour = new SamplesList("Parrot", "It's bird talker", R.drawable.parrot);
+        SamplesList sampleFive = new SamplesList("Boeing", "It's largest \naircraft manufacturer", R.drawable.boeing);
 
         SampleAdapter sampleAdapter = new SampleAdapter(this);
         sampleAdapter.addSimples(sampleOne);
@@ -76,6 +76,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

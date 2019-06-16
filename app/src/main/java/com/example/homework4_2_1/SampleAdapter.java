@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,12 +16,8 @@ public class SampleAdapter extends BaseAdapter {
     private LayoutInflater inflater;
 
     public SampleAdapter(Context context) {
-         inflater=LayoutInflater.from(context);
+        inflater = LayoutInflater.from(context);
     }
-
-//    public SampleAdapter(LayoutInflater inflater) {
-//        this.inflater = inflater;
-//    }
 
     public void addSimples(SamplesList samplesList) {
 
@@ -48,23 +43,24 @@ public class SampleAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View view = null;
-        TextView listNameText,listExampleName;
-        ImageView listImage;
+
         if (convertView != null) {
+
             view = convertView;
+
         } else {
 
-            view = inflater.inflate(R.layout.samples_list_item,parent,false);
+            view = inflater.inflate(R.layout.samples_list_item, parent, false);
 
-            SamplesList list = (SamplesList)getItem(position);
+            SamplesList list = (SamplesList) getItem(position);
 
-             listNameText = view.findViewById(R.id.sample_name);
+            TextView listNameText = view.findViewById(R.id.sample_name);
             listNameText.setText(list.getName());
 
-             listExampleName = view.findViewById(R.id.sample_example_name);
+            TextView listExampleName = view.findViewById(R.id.sample_example_name);
             listExampleName.setText(list.getExampleName());
 
-             listImage = view.findViewById(R.id.sample_image);
+            ImageView listImage = view.findViewById(R.id.sample_image);
             listImage.setImageResource(list.getDrawableId());
 
         }
