@@ -4,15 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
-
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-
 public class MainActivity extends AppCompatActivity {
-
-    private ListView listView;
+    Button button;
+    ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
-        SamplesList sampleOne = new SamplesList("BMW", "It's car brand", R.drawable.x5);
-        SamplesList sampleTwo = new SamplesList("Chernobyl", "It's world catastrophe", R.drawable.chernobyl);
-        SamplesList sampleThree = new SamplesList("United States \nof America", "It's world power", R.drawable.usa);
-        SamplesList sampleFour = new SamplesList("Parrot", "It's bird talker", R.drawable.parrot);
-        SamplesList sampleFive = new SamplesList("Boeing", "It's largest \naircraft manufacturer", R.drawable.boeing);
 
-        SampleAdapter sampleAdapter = new SampleAdapter(this);
+        SamplesList sampleOne = new SamplesList("BMW", "It's car brand", R.drawable.x5, button, R.drawable.delete_forever);
+        SamplesList sampleTwo = new SamplesList("Chernobyl", "It's world catastrophe", R.drawable.chernobyl, button, R.drawable.delete_forever);
+        SamplesList sampleThree = new SamplesList("United States \nof America", "It's world power", R.drawable.usa, button, R.drawable.delete_forever);
+        SamplesList sampleFour = new SamplesList("Parrot", "It's bird talker", R.drawable.parrot, button, R.drawable.delete_forever);
+        final SamplesList sampleFive = new SamplesList("Boeing", "It's largest \naircraft manufacturer", R.drawable.boeing, button, R.drawable.delete_forever);
+
+        final SampleAdapter sampleAdapter = new SampleAdapter(this);
         sampleAdapter.addSimples(sampleOne);
         sampleAdapter.addSimples(sampleTwo);
         sampleAdapter.addSimples(sampleThree);
@@ -75,5 +77,11 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intentSettings);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+
+    public void onClick(View v) {
+        Toast.makeText(this, "hhhh", Toast.LENGTH_SHORT).show();
+
     }
 }
